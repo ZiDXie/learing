@@ -49,3 +49,16 @@ bool link_del(Linklist& L, int i, int& e)
 	free(p0);
 	return true;
 }
+
+void creat(Linklist& L, int n) {
+	L = (Linklist)malloc(sizeof(LNode));
+	L->next = NULL;
+	for (int i = n; i > 0; i--) {
+		Linklist p = (Linklist)malloc(sizeof(LNode));
+		int e;
+		scanf("%d", &e);
+		p->date = e;
+		p->next = L->next;
+		L->next = p;
+	}
+}

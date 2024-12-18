@@ -14,7 +14,7 @@ typedef struct {
 	int front;
 	int rear;
 }queue;
-
+//入队和出队时间复杂度为O（1）
 bool queue_init(queue& q);
 int queue_len(queue& q);
 bool enqueue(queue& q,int e);

@@ -1,34 +1,31 @@
 #include "static_link.h"
 
 bool stack_link_init(SLinklist& s) {
-	for (int i = 0; i < MAX_SIZE - 2; i++) {
-		s[i].cur = i + 1;
+	for (int i = 0; i < MAX_SIZE; i++) {
+		s.s[i].next = i + 1;
 	}
-	s[MAX_SIZE - 2].cur = s[MAX_SIZE - 1].cur = 0;
+	s.s[MAX_SIZE].next =  0;
 	return true;
 }
 
-int malloc_s(SLinklist& s) {
-	int index = s[0].cur;
-	s[0].cur = s[index].cur;
-	return index;
-}
-
-void free_s(SLinklist& s,int i) {
-	s[i].cur = s[0].cur;
-	s[0].cur = i;
-}
-
-int link_length(SLinklist s) {
-	int len = 0;
-	int index = MAX_SIZE - 1;
-	while (s[index].cur) {
-		index++;
-		len++;
-	}
-	return len;
-}
-
 bool stack_link_insert(SLinklist& s, int i, int e) {
+	int q;
+	if (s.avail == 0) {
+		return false;
+	}
+	q = s.avail;
+	s.avail = s.s[q].next;
+	s.s[q].data = e;
+	s.s[q].next=s.s[i].next;
+	s.s[i].next = q;
+	return true;
+}
 
+bool stack_link_del(SLinklist& s, int i, int& e) {
+	int q;
+	q = s.s[i].next;
+	s.s[i].next = s.s[q].next;
+	s.s[q].next = s.avail;
+	s.avail = q;
+	return true;
 }

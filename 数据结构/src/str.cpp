@@ -121,3 +121,41 @@ bool substring_s(Sstring T, Sstring& sub, int pos, int len) {
 	}
 	return true;
 }
+
+void get_next(Sstring T, int next[]) {
+	int j = 1; 
+	int k = 0;
+	next[1] = 0;
+	//遍历模式串
+	while (j < T[0]) {
+		//开始比较，k=0代表重新开始比较
+		if (k == 0 || T[j] == T[k]) {
+			j++;
+			k++;
+			next[j] = k;
+		}
+		else {
+			k = next[k];
+		}
+	}
+}
+
+int index_kmp(Sstring S, Sstring T, int pos) {
+	int i = pos;
+	int j = 1;
+	while (i <= S[0] && j <= T[0]) {
+		//指针移动的条件
+		if (S[i] == T[j] || j == 0) {
+			i++; j++;//即使最后匹配成功后也会再加加一次
+		}
+		else {
+			j = next[j];//不匹配的情况
+		}
+	}
+	//最后成功匹配
+	if (j > T[0]) {
+		return i - T[0];
+	}
+	//匹配失败
+	return 0;
+}

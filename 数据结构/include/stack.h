@@ -28,7 +28,7 @@ bool init_stack(stack& s);
 bool get_top(stack& s, int& e);
 bool push(stack& s, int e);
 bool pop(stack& s, int& e);
-
+//入栈和出栈时间复杂度为O（1）
 bool init_link_stack(linklist& s);
 bool push_link(linklist& s, int e);
 bool pop_link(linklist& s, int& e);

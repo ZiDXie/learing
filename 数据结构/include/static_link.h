@@ -5,35 +5,21 @@
 #define MAX_SIZE 100
 #include "iostream"
 
-typedef struct {
+struct elem{
 	int data;
-	int cur;
-}SLinklist[MAX_SIZE],component;
+	int next;
+};
 
-/*
-	 -------------
-	| 备用 | data |
-	 -------------
-	|   1  | data | 0
-	 -------------
-	|   2  | data | 1
-	 -------------
-	|   0  | data | 2
-	 -------------
-	|  主  | data |
-	 -------------
-	|   0  | data | 3
-	 -------------
-*/
+struct SLinklist {
+	elem s[MAX_SIZE + 1];
+	int head, avail;
+};
+
 bool stack_link_init(SLinklist& s);
-/*
-备用链表申请空间
-*/
-int malloc_s(SLinklist& s);
-/*
-释放空间回备用链表
-*/
-void free_s(SLinklist& s,int i);
-int link_length(SLinklist s);
+
+//时间复杂度为O（n）
 bool stack_link_insert(SLinklist& s, int i,int e);
+
+bool stack_link_del(SLinklist& s, int i,int &e);
+
 #endif

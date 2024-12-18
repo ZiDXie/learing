@@ -27,6 +27,6 @@ bool Init(SqList& L);
 bool Insert(SqList& L,int i,int e);
 bool Del(SqList& L, int i,int& e);
 int find(SqList& L, int e);
-
+//插入和删除时间复杂度为O（n）
 
 #endif

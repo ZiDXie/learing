@@ -28,7 +28,7 @@ bool push(stack& s, int e) {
 			printf("realloc failed");
 			return false;
 		}
-		s.top = s.base + s.stcak_size;
+		s.top = s.base + s.stcak_size;//重新定位top指针
 		s.stcak_size = s.stcak_size + 10;
 	}
 	*s.top++ = e;//先调用，后加加
