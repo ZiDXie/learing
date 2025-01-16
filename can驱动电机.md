@@ -9,6 +9,8 @@
 - [How To Use SocketCAN With The Command-Line In Linux](https://blog.mbedded.ninja/programming/operating-systems/linux/how-to-use-socketcan-with-the-command-line-in-linux/)
 - [How To Use SocketCAN With C++ In Linux](https://blog.mbedded.ninja/programming/operating-systems/linux/how-to-use-socketcan-with-c-in-linux/)
 
+------
+
 ## 前期准备
 
 - 如果您想在 CAN 接口上发送/接收数据，您应该安装`can-utils` ：
@@ -30,6 +32,8 @@
   ```
   candump can0
   ```
+
+------
 
 ## CAN驱动
 
@@ -75,6 +79,8 @@ done
 ```
 
 `sleep 0.001`代表的是发送频率为`1KHz`，具体频率值可在[rmc610](https://rm-static.djicdn.com/tem/RM%20C610%E6%97%A0%E5%88%B7%E7%94%B5%E6%9C%BA%E8%B0%83%E9%80%9F%E5%99%A8%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%20%E5%8F%91%E5%B8%83%E7%89%88.pdf)查找。
+
+------
 
 ### 电调反馈报文
 
