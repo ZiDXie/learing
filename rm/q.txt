@@ -1,0 +1,12 @@
+robotdata有什么用
+ eject_sensitivity_作用
+ scale作用
+ traj是啥
+ shooter参数作用
+ suggest_fire_
+411 速度达到振荡阈值 
+ 
+powerlimit参数作用
+缓冲与阈值（normal模式）
+新旧电容
+
