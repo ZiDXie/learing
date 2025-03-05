@@ -10,7 +10,9 @@ set(SOURCES
         src/Array/SortedSquared.cpp
         src/Array/minSubArrayLen.cpp
         src/Array/generateMatrix.cpp
+        src/LinkList/removeElements.cpp
+        src/LinkList/MyLinkedList.cpp
+        src/Array/区间和.cpp
 )
 
 add_executable(learn ${SOURCES})
-
