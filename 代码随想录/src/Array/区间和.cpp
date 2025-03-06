@@ -26,7 +26,7 @@ class Solution {
     }
 
     /// @brief 前缀和
-    /// C++ 代码 面对大量数据 读取 输出操作，最好用scanf 和 printf，耗时会小很多
+    /// C++ 代码 面对大量数据 读取 输出操作，最好用scanf 和 printf，耗时更少
     void qianzhuihe() {
         int n;
         cin >> n;

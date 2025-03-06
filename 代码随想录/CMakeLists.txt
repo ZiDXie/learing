@@ -13,6 +13,7 @@ set(SOURCES
         src/LinkList/removeElements.cpp
         src/LinkList/MyLinkedList.cpp
         src/Array/区间和.cpp
+        src/LinkList/reverseList.cpp
 )
 
 add_executable(learn ${SOURCES})
