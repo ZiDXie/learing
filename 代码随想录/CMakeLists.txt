@@ -14,6 +14,9 @@ set(SOURCES
         src/LinkList/MyLinkedList.cpp
         src/Array/区间和.cpp
         src/LinkList/reverseList.cpp
+        src/LinkList/swapPairs.cpp
+        src/LinkList/removeNthFromEnd.cpp
+        src/LinkList/detectCycle.cpp
 )
 
 add_executable(learn ${SOURCES})
