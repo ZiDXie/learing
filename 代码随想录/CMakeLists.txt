@@ -17,6 +17,7 @@ set(SOURCES
         src/LinkList/swapPairs.cpp
         src/LinkList/removeNthFromEnd.cpp
         src/LinkList/detectCycle.cpp
+        src/Hash/isAnagram.cpp
 )
 
 add_executable(learn ${SOURCES})
