@@ -19,6 +19,8 @@ set(SOURCES
         src/LinkList/detectCycle.cpp
         src/Hash/isAnagram.cpp
         src/Hash/intersection.cpp
+        src/Hash/twoSum.cpp
+        src/Hash/fourSumCount.cpp
 )
 
 add_executable(learn ${SOURCES})
