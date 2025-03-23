@@ -24,6 +24,7 @@ set(SOURCES
         src/Hash/threeSum.cpp
         src/Hash/fourSum.cpp
         src/String/reverseString.cpp
+        src/String/reverseStr.cpp
 )
 
 add_executable(learn ${SOURCES})
