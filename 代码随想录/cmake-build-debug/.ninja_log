@@ -1,7 +1,0 @@
-# ninja log v6
-1	23	1740750285704354600	CMakeFiles/learn.dir/src/Array/minSubArrayLen.cpp.o	3f642b786772cbd5
-1	89	1740750285704099700	CMakeFiles/learn.dir/src/Array/RemoveNums.cpp.o	8d9099897189af7
-1	93	1740750285704219600	CMakeFiles/learn.dir/src/Array/SortedSquared.cpp.o	22d9b2cd1534f4b
-1	129	1740750285703981800	CMakeFiles/learn.dir/src/Array/BinarySearch.cpp.o	a64b7d596404948f
-1	238	1740750285703765000	CMakeFiles/learn.dir/main.cpp.o	8fd51e613f621eca
-240	292	1740750285943037000	learn	5f9814ca5e1bcc1d
