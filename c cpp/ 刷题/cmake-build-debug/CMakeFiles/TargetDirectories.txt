@@ -1,0 +1,3 @@
+/home/xie/Others/Project/learing/c cpp/ 刷题/cmake-build-debug/CMakeFiles/learn.dir
+/home/xie/Others/Project/learing/c cpp/ 刷题/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/xie/Others/Project/learing/c cpp/ 刷题/cmake-build-debug/CMakeFiles/rebuild_cache.dir
