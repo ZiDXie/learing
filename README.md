@@ -4,7 +4,7 @@
 
 - [x] 数据结构
 - [x] can通信
-- [ ] gcc/makefile
+- [x] gcc/makefile
 - [ ] linux cpp
 - [ ] 代码随想录
 - [ ] 计算机网络
