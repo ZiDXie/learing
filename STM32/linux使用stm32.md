@@ -2,7 +2,7 @@
 
 ***本教程需要使用clion2025.1以上，其他版本使用openocd或其他工具，使用opend请查阅其他教程***
 
-***本教程基于linux,windows类似，stlink测试成功，其他烧录器没有测试***
+***本教程基于linux,windows类似，stlink、Jlink测试成功，其他烧录器没有测试***
 
 | 工具           | 版本              |
 | ------------ | --------------- |
@@ -10,6 +10,7 @@
 | STM32CubeCLT |                 |
 | STM32CubeMX  |                 |
 | OpenOCD      |                 |
+| JLink        |                 |
 
 ## 软件的下载及安装
 
@@ -20,6 +21,8 @@
 - cubeclt：[STM32CubeCLT - Toolset for third-party integrated development environment (IDE) providers, allowing the use of STMicroelectronics proprietary tools within their own IDE frameworks - STMicroelectronics](https://www.st.com/en/development-tools/stm32cubeclt.html)
 
 - openocd
+
+- Jlink
 
 cubeclt包含了各种编译链工具，如`arm-none-eabi-`、`ninja`、`cmake`等
 
@@ -33,11 +36,13 @@ cubeclt包含了各种编译链工具，如`arm-none-eabi-`、`ninja`、`cmake`�
 export PATH=/usr/bin:$PATH
 ```
 
-在clion的配置如图
+在clion的配置如图（Windows也是找到对应的安装位置和配置即可）
 
-![](/home/xie/.config/marktext/images/2025-05-22-21-06-32-image.png)
+![2025-05-22-21-06-32-image.png](/home/xie/Others/Project/learing/STM32/images/2025-05-22-21-06-32-image.png)
 
-![](/home/xie/.config/marktext/images/2025-05-22-20-27-11-image.png)
+![2025-05-22-20-27-11-image.png](/home/xie/Others/Project/learing/STM32/images/2025-05-22-20-27-11-image.png)
+
+
 
 ## 测试环境是否正常
 
@@ -45,45 +50,42 @@ export PATH=/usr/bin:$PATH
 
 如果环境正常，在clion里面构建效果如图
 
-![](/home/xie/.config/marktext/images/2025-05-22-21-02-20-image.png)
+![](/home/xie/Others/Project/learing/STM32/images/2025-05-22-21-02-20-image.png)
 
-![](/home/xie/.config/marktext/images/2025-05-22-20-49-26-image.png)
+![2025-05-22-20-49-26-image.png](/home/xie/Others/Project/learing/STM32/images/2025-05-22-20-49-26-image.png)
 
-## 烧录
-
-linux环境需要先连接stm32 gdb，在终端输入（提示没有命令的需要安装工具）
-
-```bash
-st-util 
-```
-
-成功的画面（或者有其他的输出，只要没报错就行）
-
-![](/home/xie/.config/marktext/images/2025-05-22-21-00-43-image.png)
-
-连接后再烧录
-
-![](/home/xie/.config/marktext/images/2025-05-22-20-53-05-image.png)
-
-烧录后需要`ctrl+c`断开`gdb`连接才能运行程序
-
-## 单机程序及FreeRTOS的调试
+#### 单机程序及FreeRTOS的调试
 
 ***Warning***
 
 需要调试`FreeRTOS`的需要按照以下设置，否则调试会报错
 
-![](/home/xie/.config/marktext/images/2025-05-22-21-07-54-image.png)
+![2025-05-22-21-07-54-image.png](/home/xie/Others/Project/learing/STM32/images/2025-05-22-21-07-54-image.png)
 
-![](/home/xie/.config/marktext/images/2025-05-22-21-09-29-image.png)
+![2025-05-22-21-09-29-image.png](/home/xie/Others/Project/learing/STM32/images/2025-05-22-21-09-29-image.png)
 
-- 可执行文件：`/opt/st/stm32cubeclt_1.18.0/STLink-gdb-server/bin/ST-LINK_gdbserver`
+可执行文件：`/opt/st/stm32cubeclt_1.18.0/STLink-gdb-server/bin/ST-LINK_gdbserver`
+
 - 程序员：`/opt/st/stm32cubeclt_1.18.0/STM32CubeProgrammer/bin`
 
-![](/home/xie/.config/marktext/images/2025-05-22-21-13-18-image.png)
+![2025-05-22-21-13-18-image.png](/home/xie/Others/Project/learing/STM32/images/2025-05-22-21-13-18-image.png)
 
-![](/home/xie/.config/marktext/images/2025-05-22-21-15-23-image.png)
 
-然后正常调试即可
+
+![2025-05-22-21-15-23-image.png](/home/xie/Others/Project/learing/STM32/images/2025-05-22-21-15-23-image.png)
+
+持久会话选择关闭即可烧录后断开gdb连接，然后正常调试即可
+
+## 烧录
+
+连接后再烧录
+
+### STLINK
+
+按照上述配置后点击烧录即可
+
+### JLINK
+
+在调试服务器选择jlink后选择芯片型号即可，记得安装jlink程序。
 
 
