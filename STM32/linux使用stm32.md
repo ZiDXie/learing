@@ -38,11 +38,9 @@ export PATH=/usr/bin:$PATH
 
 在clion的配置如图（Windows也是找到对应的安装位置和配置即可）
 
-![2025-05-22-21-06-32-image.png](/home/xie/Others/Project/learing/STM32/images/2025-05-22-21-06-32-image.png)
+![2025-05-22-21-06-32-image.png](./images/2025-05-22-21-06-32-image.png)
 
-![2025-05-22-20-27-11-image.png](/home/xie/Others/Project/learing/STM32/images/2025-05-22-20-27-11-image.png)
-
-
+![2025-05-22-20-27-11-image.png](./images/2025-05-22-20-27-11-image.png)
 
 ## 测试环境是否正常
 
@@ -50,9 +48,9 @@ export PATH=/usr/bin:$PATH
 
 如果环境正常，在clion里面构建效果如图
 
-![](/home/xie/Others/Project/learing/STM32/images/2025-05-22-21-02-20-image.png)
+![](./images/2025-05-22-21-02-20-image.png)
 
-![2025-05-22-20-49-26-image.png](/home/xie/Others/Project/learing/STM32/images/2025-05-22-20-49-26-image.png)
+![2025-05-22-20-49-26-image.png](./images/2025-05-22-20-49-26-image.png)
 
 #### 单机程序及FreeRTOS的调试
 
@@ -60,19 +58,17 @@ export PATH=/usr/bin:$PATH
 
 需要调试`FreeRTOS`的需要按照以下设置，否则调试会报错
 
-![2025-05-22-21-07-54-image.png](/home/xie/Others/Project/learing/STM32/images/2025-05-22-21-07-54-image.png)
+![2025-05-22-21-07-54-image.png](./images/2025-05-22-21-07-54-image.png)
 
-![2025-05-22-21-09-29-image.png](/home/xie/Others/Project/learing/STM32/images/2025-05-22-21-09-29-image.png)
+![2025-05-22-21-09-29-image.png](./images/2025-05-22-21-09-29-image.png)
 
 可执行文件：`/opt/st/stm32cubeclt_1.18.0/STLink-gdb-server/bin/ST-LINK_gdbserver`
 
 - 程序员：`/opt/st/stm32cubeclt_1.18.0/STM32CubeProgrammer/bin`
 
-![2025-05-22-21-13-18-image.png](/home/xie/Others/Project/learing/STM32/images/2025-05-22-21-13-18-image.png)
+![2025-05-22-21-13-18-image.png](./images/2025-05-22-21-13-18-image.png)
 
-
-
-![2025-05-22-21-15-23-image.png](/home/xie/Others/Project/learing/STM32/images/2025-05-22-21-15-23-image.png)
+![2025-05-22-21-15-23-image.png](./images/2025-05-22-21-15-23-image.png)
 
 持久会话选择关闭即可烧录后断开gdb连接，然后正常调试即可
 
@@ -87,5 +83,3 @@ export PATH=/usr/bin:$PATH
 ### JLINK
 
 在调试服务器选择jlink后选择芯片型号即可，记得安装jlink程序。
-
-
